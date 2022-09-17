@@ -5,7 +5,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Script from "next/script";
 import Layout from "/components/Layout";
-
+import i18n from '../i18n.json'
 /**
  * List pages you want to be publicly accessible, or leave empty if
  * every page requires authentication. Use this naming strategy:
@@ -24,7 +24,7 @@ const MyApp = ({ Component, pageProps }) => {
    * Otherwise, use Clerk to require authentication.
    */
   return (
-    <ClerkProvider {...pageProps}>
+    <ClerkProvider {...pageProps} localization={i18n}>
       <Head>
         <title>Clerk + Next.js Starter</title>
         <link rel="icon" href="/favicon.ico" />
